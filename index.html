@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ca"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#2b1d14">
+<title>Flashet Bubbles · 200 Niveles + Trampas + Animaciones</title>
+<link rel="icon" href="assets/img/flashet.png">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Flashet Bubbles">
+<link rel="apple-touch-icon" href="assets/img/flashet.png">
+</head><body>
+<div id="app">
+ <!-- TITLE -->
+ <section id="scr-title" class="scr on">
+  <div class="sky"></div>
+  <h1 class="logo"><span>Flashet</span><b>Bubbles</b></h1>
+  <img id="titleHero" class="hero" src="assets/img/flashet.png" alt="Flashet">
+  <div class="btns">
+   <button class="big" id="bPlay" data-t="play"></button>
+   <button id="bAlbum" data-t="album"></button>
+   <div class="row"><button id="bLang" class="sm"></button><button id="bSnd" class="sm"></button><button id="bCred" class="sm" data-t="credits"></button></div>
+  </div>
+ </section>
+ <!-- MAP -->
+ <section id="scr-map" class="scr">
+  <header class="bar"><button class="ic" id="mapBack">‹</button><h2 data-t="map"></h2><span id="mapStars" class="pill"></span><button class="ic" id="mapAlbum">📷</button></header>
+  <div id="mapScroll"><div id="mapPath"></div></div>
+ </section>
+ <!-- GAME -->
+ <section id="scr-game" class="scr">
+  <header class="hud">
+   <button class="ic" id="gBack">‹</button>
+   <div class="hb"><small data-t="level"></small><b id="hLvl"></b></div>
+   <div class="hb grow"><small id="hGoalT"></small><div class="prog"><i id="hProg"></i></div></div>
+   <div class="hb"><small data-t="score"></small><b id="hScore">0</b></div>
+   <div class="hb shots"><small data-t="shots"></small><b id="hShots"></b></div>
+  </header>
+  <div id="stage"><canvas id="cv"></canvas><div id="flash"></div><div id="toast"></div></div>
+ </section>
+ <!-- ALBUM -->
+ <section id="scr-album" class="scr">
+  <header class="bar"><button class="ic" id="albBack">‹</button><h2 data-t="album"></h2><span id="albCount" class="pill"></span></header>
+  <div id="albGrid"></div>
+ </section>
+ <!-- CREDITS -->
+ <section id="scr-cred" class="scr">
+  <header class="bar"><button class="ic" id="credBack">‹</button><h2 data-t="credits"></h2></header>
+  <div id="credList"></div>
+ </section>
+ <!-- MODAL -->
+ <div id="modal" class="hide"><div class="card" id="mcard"></div></div>
+</div>
+<script src="assets/photos.js"></script>
+<script src="game.js"></script>
+</body></html>
