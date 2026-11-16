@@ -69,19 +69,3 @@ svg.trail{position:absolute;left:0;top:0;pointer-events:none}
 .cbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px}
 .goalcard img{width:120px;animation:bob 1.4s infinite}
 .sp{display:flex;gap:8px;justify-content:center;font-size:12px;margin:8px 0}.sp span{background:#ffe3bd;border-radius:10px;padding:4px 8px}
-
-/* Extra fun background animations */
-#stage::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 30%, #ff6b3d22, transparent 40%),
-              radial-gradient(circle at 80% 70%, #3fa7ff22, transparent 40%);
-  animation: pulseBg 4s ease-in-out infinite alternate;
-  pointer-events: none;
-  z-index: 0;
-}
-@keyframes pulseBg { from { opacity: 0.5; } to { opacity: 1; } }
-#cv { position: relative; z-index: 1; }
-.trap-warning { color: #e0581f; font-weight: 900; animation: blink 1s infinite; }
-@keyframes blink { 50% { opacity: 0.4; } }
